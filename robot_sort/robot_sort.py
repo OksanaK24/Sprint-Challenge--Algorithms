@@ -96,6 +96,7 @@ class SortingRobot:
         """
         Sort the robot's list.
         """
+
         # base case - if robot can't move any further to the right after all his movement during recursion
         if self.can_move_right() == False:
             return 
@@ -111,12 +112,12 @@ class SortingRobot:
             # swap with the smallest
             self.move_right()
             if self.compare_item() == 1:
-                self.swap_item
-        while self.can_move_left():
-            self.move_left
+                self.swap_item()
+        while self.can_move_left() and self.compare_item() is not None:
+            self.move_left()
         self.swap_item()
         self.move_right()
-        # self.sort()
+        self.sort()
 
 
 
